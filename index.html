@@ -9,60 +9,49 @@
       href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
     />
     <link rel="stylesheet" type="text/css" href="base.css" />
+    <script src="calculator.js" defer></script>
     <title>Torden Git Task</title>
+    <style>
+      #container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+      }
+
+      .expanded-button {
+        grid-column: span 2;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 0.5rem;
+        width: 26rem;
+      }
+
+      .center {
+        text-align: center;
+        font-size: x-large;
+        font-weight: 500;
+      }
+
+      .scrollable {
+        overflow-x: auto;
+      }
+
+      .card {
+        margin: 0;
+      }
+    </style>
   </head>
   <body>
-    <main class="container">
-      <nav>
-        <ul>
-          <li><strong>Torden Team</strong></li>
-        </ul>
-        <ul>
-          <li><a href="#" role="button">Inicio</a></li>
-          <li><a href="contactos.html">Contactos</a></li>
-          <li><a href="personas.html">Personas</a></li>
-        </ul>
-      </nav>
-
-      <h1 align="center">¡Hola somos Torden!</h1>
-      <h6 align="justify" class="about-us">
-        ¡Bienvenidos a nuestro mundo de innovación y automatización del servicio
-        al cliente! En nuestra empresa, nos apasiona llevar la atención al
-        cliente a un nuevo nivel utilizando la poderosa tecnología del modelo de
-        lenguaje natural GPT-3.5 de OpenAI.
-
-        <br />
-        <br />
-        Imagínate un mundo en el que las interacciones con los clientes sean
-        fluidas, conversacionales y personalizadas. Con nuestro enfoque
-        vanguardista, transformamos el modo en que las empresas interactúan con
-        sus clientes, ofreciendo respuestas inteligentes y soluciones eficientes
-        a través de nuestro modelo de lenguaje natural. Cada interacción se
-        convierte en una experiencia única, ya que GPT-3.5 nos permite
-        comprender las necesidades y preguntas de los clientes de manera precisa
-        y rápida.
-
-        <br />
-        <br />
-        Con su potente capacidad para generar respuestas coherentes y
-        contextuales, nuestros servicios de automatización mejoran la eficiencia
-        y la calidad de las interacciones con los clientes. Pero no nos
-        detenemos ahí. Nuestro equipo de expertos en IA trabaja constantemente
-        para entrenar y afinar nuestro modelo GPT-3.5, asegurando que esté a la
-        vanguardia de las últimas innovaciones en el campo del procesamiento del
-        lenguaje natural.
-
-        <br />
-        <br />
-        ¡Descubre la diferencia que la automatización del servicio al cliente
-        con GPT-3.5 puede hacer en tu empresa! Permítenos llevar tu atención al
-        cliente a nuevos horizontes, ofreciendo experiencias excepcionales que
-        deleitarán a tus clientes y te destacarán en el mercado.
-      </h6>
-
-      <div align="center">
-        <img src="public/logo.png" alt="torden_logo" />
-      </div>
+    <main id="container">
+      <article class="card">
+        <header id="calculator-display" class="center scrollable">0</header>
+        <div id="calculator-body" class="grid"></div>
+        <footer class="center">Calculator Example</footer>
+      </article>
     </main>
   </body>
 </html>
